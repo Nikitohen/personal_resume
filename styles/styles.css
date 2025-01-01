@@ -208,29 +208,87 @@ footer img {
     letter-spacing: 0.5px;
     font-size: 28px;
     text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
+    margin-top: 30px;
 }
 
-.contact {
-    border: red solid 1px;
-    width: 700px;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    align-content: center;
-}
-
-#message {
-    width: 450px;
-    height: 200px;
-}
-
+.contact,
 form {
-    border: green solid 1px;
+    width: 700px;
     display: flex;
     align-items: center;
     align-content: center;
     flex-direction: column;
+    row-gap: 10px;
+}
 
+.contact {
+    border: rgb(201, 201, 201) solid 1px;
+}
+
+#message {
+    width: 450px;
+    height: 100px;
+    margin-top: 5px;
+    padding: 10px;
+    font-family: Inter;
+}
+
+#email {
+    width: 450px;
+    margin-top: 5px;
+    padding: 10px;
+    font-family: Inter;
+    background-color: #f0f0f0;
+    border: none;
+    font-weight: 300;
+    color: rgb(161, 161, 161);
+}
+
+label {
+    font-family: Inter;
+    font-size: 12px;
+}
+
+textarea {
+    font-family: Inter;
+    background-color: #f0f0f0;
+    border: none;
+    font-weight: 300;
+    color: rgb(161, 161, 161);
+    resize: none;
+}
+
+.full-name {
+    display: flex;
+    width: 474px;
+    justify-content: space-between;
+}
+
+#name,
+#surname,
+button {
+    margin-top: 5px;
+    padding: 10px;
+    width: 200px;
+    font-family: Inter;
+    background-color: #f0f0f0;
+    border: none;
+    font-weight: 300;
+    color: rgb(161, 161, 161);
+}
+
+.message,
+.email {
+    margin-top: 15px;
+}
+
+button {
+    margin-bottom: 30px;
+    color: black;
+}
+
+button:hover {
+    background-color: #9B9B9B;
 }
 
 
