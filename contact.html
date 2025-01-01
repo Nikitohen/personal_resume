@@ -1,26 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="/styles/styles.css" />
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="contact-body">
     <!-- header section -->
     <header>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#timeline">Timeline</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/index.html#about">About Me</a></li>
+          <li><a href="/index.html#timeline">Timeline</a></li>
+          <li><a href="/index.html#skills">Skills</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="contact form">
+      <form action="" method="POST">
+        <h1>Get in touch if you like my work</h1>
+        <div class="name">
+          <label for="name">First Name: </label>
+          <br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            value="Enter your name"
+          />
+        </div>
 
-      
+        <div class="surname">
+          <label for="surname">Last Name: </label>
+          <br />
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            required
+            value="Enter your last name"
+          />
+        </div>
+
+        <div class="email">
+          <label for="email">Your Email: </label>
+          <br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            value="Enter your email"
+          />
+        </div>
+
+        <div class="message">
+          <label for="message">Message: </label>
+          <br />
+          <textarea id="message" name="message" row="20" cols="60" required>
+Your message here...</textarea
+          >
+        </div>
+
+        <button type="submit" value="Send"></button>
+      </form>
+    </section>
 
     <script src="/js/main.js"></script>
-</body>
+  </body>
 </html>
