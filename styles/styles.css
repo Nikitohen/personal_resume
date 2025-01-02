@@ -14,7 +14,7 @@ html {
 .index-body,
 .contact-body {
     width: 100vw;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     flex-direction: column;
     font-family: Inter;
@@ -96,7 +96,8 @@ strong {
     left: 50%;
     top: 375px;
     width: 1px;
-    height: 2750px;
+    /* height: 2750px; */
+    height: 1000px;
     background-color: #9B9B9B;
     transform: translateX(-50%);
     z-index: 1;
@@ -135,11 +136,23 @@ h2 {
     left: 15px;
 }
 
+.heading:hover,
+.heading h2:hover {
+    cursor: pointer;
+    text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
+}
+
+.heading:hover {
+    background-color: #bbbbbb7d;
+}
+
+
+
 /* Each section of timeline text block styling */
 .text-block {
     width: 484px;
     padding: 10px;
-    /* display: none; */
+    display: none;
     background: linear-gradient(to bottom, rgba(184, 184, 184, 0.811), rgba(251, 251, 251, 0)) ;
     border-top: #9B9B9B solid 1px;
     font-weight: 200;
@@ -292,4 +305,183 @@ button:hover {
 }
 
 
+/*  ============================== responsive design for tablet ==============================  */
+@media (max-width: 744px) {
+    
+    /* navigation */
+.main-nav ul {
+    width: 528px;
+}
 
+/* General introductory text */
+h1 {
+    font-size: 24px;
+}
+.intro p {
+    width: 600px;
+}
+
+/* horizontal timeline styling */
+.horizontal-line {
+    width: 600px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+/* vertical timeline styling */
+.vertical-line {
+    display: none;
+}
+
+/* timeline container styles */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 600px;
+}
+
+/* Each section of timeline div class styling for h2 */
+.heading {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left .heading h2,
+.right .heading h2 {
+    position: static;
+    margin-top: 15px;
+}
+
+/* Each section of timeline text block styling */
+.text-block {
+    box-sizing: border-box;
+    width: 600px;
+    padding: 20px;
+    /* display: none; */
+    line-height: 140%;
+}
+
+/* Each section of timeline margin */
+.about-me {
+    margin-top: 0px;
+}
+
+.left,
+.right {
+    width: 600px;
+}
+
+/* Skills section styles */
+img {
+    width: 30px;
+    height: 30px;
+}
+
+.icons {
+    width: 600px;
+}
+
+/* Contact page responsive design */
+.contact {
+    width: 650px;
+}
+
+}
+
+
+
+
+
+
+/*  ============================== responsive design for phone ==============================  */
+@media (max-width: 430px) {
+
+/* navigation */
+.main-nav ul {
+    width: 340px;
+}
+
+li a[href="#timeline"] {
+    display: none;
+}
+
+/* General introductory text */
+.intro {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+h1 {
+    width: 300px;
+    text-align: center;
+}
+
+.intro p {
+    width: 400px;
+}
+
+.lines,
+.horizontal-line {
+    width: 300px;
+}
+
+.timeline {
+    width: 400px;
+}
+
+.left,
+.right,
+.heading {
+    width: 400px;
+}
+.icons {
+    width: 400px;
+}
+img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Contact page responsive design */
+.contact-body {
+    width: 400px;
+}
+
+ul li:nth-child(2) {
+    display:none;
+}
+
+.contact,
+form {
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.contact form h1 {
+    font-size: 20px;
+}
+
+.message,
+#message,
+.email,
+#email,
+.full-name {
+    width: 360px;
+    box-sizing: border-box;
+}
+
+.name,
+#name,
+.surname,
+#surname {
+    width: 170px;
+    box-sizing: border-box;
+}
+
+}
