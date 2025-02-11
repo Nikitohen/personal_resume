@@ -1,487 +1,395 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
 
-html {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-behavior: smooth;
-}
+    .index-body,
+    .contact-body {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-family: Inter;
+        font-size: 16px;
+    }
 
-/* general content of body section styling */
-.index-body,
-.contact-body {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-family: Inter;
-    font-size: 16px;
-}
+    header,
+    .main-nav {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-/* navigation */
-.main-nav ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-    top: 40px;
-    width: 684px;
-    margin-bottom: 100px;
-}
+    .main-nav {
+        box-sizing: border-box;
+        margin: 30px 0 30px;
+        padding: 0 20px;
+    }
 
-li {
-    font-family: 'JetBrains Mono';
-    font-size: 16px;
-    font-weight: 200;
-}
+    .main-nav ul {
+        width: 100vw;
+        text-align: center;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+    }
 
-ul li a {
-    text-decoration: none;
-    color: black;
-}
-
-li a:hover {
-    font-weight: 500;
-    text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
-}
-
-/* General introductory text */
-.intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 212px;
-    margin-bottom: 40px;
-}
-
-h1 {
-    margin-bottom: 50px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    font-size: 28px;
-    text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
-}
-
-.intro p {
-    width: 860px;
-    text-align: center;
-    line-height: 2;
-    text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
-    font-weight: 300;
-}
-
-strong {
-    font-weight: 400;
-}
-
-.intro p strong {
-    font-weight: 500;
-}
-
-/* horizontal timeline styling */
-.horizontal-line {
-    width: 950px;
-    height: 1px;
-    background-color: #9B9B9B;
-    margin-bottom: 100px;
-}
-
-/* vertical timeline styling */
-.vertical-line {
-    position: absolute;
-    left: 50%;
-    top: 375px;
-    width: 1px;
-    /* height: 2750px; */
-    height: 1000px;
-    background-color: #9B9B9B;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-/* timeline container styles */
-.timeline {
-    width: 1010px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Each section of timeline div class styling for h2 */
-.heading {
-    width: 504px;
-    height: 70px;
-    background-color: #d9d9d981;
-    position: relative;
-}
-
-h2 {
-    font-family: 'JetBrains Mono';
-    font-weight: 300;
-    font-size: 20px;
-}
-
-.left .heading h2  {
-    position: absolute;
-    bottom: 5px;
-    right: 15px;
-}
-
-.right .heading h2 {
-    position: absolute;
-    bottom: 5px;
-    left: 15px;
-}
-
-.heading:hover,
-.heading h2:hover {
-    cursor: pointer;
-    text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
-}
-
-.heading:hover {
-    background-color: #bbbbbb7d;
-}
-
-
-
-/* Each section of timeline text block styling */
-.text-block {
-    width: 484px;
-    padding: 10px;
-    display: none;
-    background: linear-gradient(to bottom, rgba(184, 184, 184, 0.811), rgba(251, 251, 251, 0)) ;
-    border-top: #9B9B9B solid 1px;
-    font-weight: 200;
-    line-height: 140%;
-}
-
-/* Each section of timeline margin */
-.left {
-    position: relative;
-    margin-top: 40px;
-    width: 504px;
-}
-
-.right {
-    position: relative;
-    margin-top: 40px;
-    width: 504px;
-    align-self: flex-end;
-} 
-
-/* Skills section styles */
-#skills {
-    margin-top: 80px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
-}
-
-img {
-    width: 40px;
-    height: 40px;
-}
-
-.icons {
-    width: 700px;
-    display: flex;
-    list-style-type: none;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-/* footer styling */
-footer {
-    width: 130px;
-    margin: 50px 0 10px 0;
-    display: flex;
-    align-items: center;
-    font-weight: 200;
-    font-size: 12px;
-    justify-content: space-between;
-}
-
-footer img {
-    width: 15px;
-    height: 15px;
-}
-
-
-/* Contact page styling */
-.contact h1 {
-    font-family: Inter;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    font-size: 28px;
-    text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
-    margin-top: 30px;
-}
-
-.contact,
-form {
-    width: 700px;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-    row-gap: 10px;
-}
-
-.contact {
-    border: rgb(201, 201, 201) solid 1px;
-}
-
-#message {
-    width: 450px;
-    height: 100px;
-    margin-top: 5px;
-    padding: 10px;
-    font-family: Inter;
-}
-
-#email {
-    width: 450px;
-    margin-top: 5px;
-    padding: 10px;
-    font-family: Inter;
-    background-color: #f0f0f0;
-    border: none;
-    font-weight: 300;
-    color: rgb(161, 161, 161);
-}
-
-label {
-    font-family: Inter;
-    font-size: 12px;
-}
-
-textarea {
-    font-family: Inter;
-    background-color: #f0f0f0;
-    border: none;
-    font-weight: 300;
-    color: rgb(161, 161, 161);
-    resize: none;
-}
-
-.full-name {
-    display: flex;
-    width: 474px;
-    justify-content: space-between;
-}
-
-#name,
-#surname,
-button {
-    margin-top: 5px;
-    padding: 10px;
-    width: 200px;
-    font-family: Inter;
-    background-color: #f0f0f0;
-    border: none;
-    font-weight: 300;
-    color: rgb(161, 161, 161);
-}
-
-.message,
-.email {
-    margin-top: 15px;
-}
-
-button {
-    margin-bottom: 30px;
-    color: black;
-}
-
-button:hover {
-    background-color: #9B9B9B;
-}
-
-
-/*  ============================== responsive design for tablet ==============================  */
-@media (max-width: 744px) {
+    li {
+        justify-content: space-around;
+        font-family: 'JetBrains Mono';
+        font-size: 16px;
+        font-weight: 200;
+    }
     
-    /* navigation */
-.main-nav ul {
-    width: 528px;
-}
+    ul li a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    li a:hover {
+        font-weight: 500;
+        text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
+    }
 
-/* General introductory text */
-h1 {
-    font-size: 24px;
-}
-.intro p {
-    width: 600px;
-}
-
-/* horizontal timeline styling */
-.horizontal-line {
-    width: 600px;
-    margin-top: 50px;
-    margin-bottom: 0px;
-}
-
-/* vertical timeline styling */
-.vertical-line {
-    display: none;
-}
-
-/* timeline container styles */
-.timeline {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    width: 600px;
-}
-
-/* Each section of timeline div class styling for h2 */
-.heading {
-    width: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.left .heading h2,
-.right .heading h2 {
-    position: static;
-    margin-top: 15px;
-}
-
-/* Each section of timeline text block styling */
-.text-block {
-    box-sizing: border-box;
-    width: 600px;
-    padding: 20px;
-    /* display: none; */
-    line-height: 140%;
-}
-
-/* Each section of timeline margin */
-.about-me {
-    margin-top: 0px;
-}
-
-.left,
-.right {
-    width: 600px;
-}
-
-/* Skills section styles */
-img {
-    width: 30px;
-    height: 30px;
-}
-
-.icons {
-    width: 600px;
-}
-
-/* Contact page responsive design */
-.contact {
-    width: 650px;
-}
-
-}
+    .hide-on-mobile {
+        display: none;
+    }
 
 
+    /* introductory section styling */
+    .intro {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h1 {
+        box-sizing: border-box;
+        width: 100vw;
+        text-align: center;
+        padding: 0 20px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        font-size: 20px;
+        text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
+    }
+    
+    .intro p {
+        padding: 0 20px;
+        text-align: center;
+        line-height: 2;
+        text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
+        font-weight: 300;
+    }
+    
+    strong {
+        font-weight: 400;
+    }
+    
+    .intro p strong {
+        font-weight: 500;
+    }
+
+    /* lines styling */
+    .horizontal-line {
+        box-sizing: border-box;
+        margin: 50px 0;
+        width: 400px;
+        height: 1px;
+        background-color: #9B9B9B;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    /* timeline section styling */
+    .timeline {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left,
+    .right {
+        padding: 0 20px;
+        box-sizing: border-box;
+        width: 100vw;
+    }
+    
+    .timeline section h2 {
+        font-family: 'JetBrains Mono';
+        font-weight: 300;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        background-color: #d9d9d981;
+        box-sizing: border-box;
+        margin-bottom: 0;
+    }
+
+    h2:hover {
+        cursor: pointer;
+        text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
+    }
+
+    .timeline h2:hover {
+        background-color: #bbbbbb7d;
+    }
+
+    .text-block {
+        box-sizing: border-box;
+        text-align: justify;
+        padding: 10px;
+        margin: 0 0 40px;
+        display: none;
+        background: linear-gradient(to bottom, rgba(184, 184, 184, 0.811), rgba(251, 251, 251, 0)) ;
+        border-top: #9B9B9B solid 1px;
+        font-weight: 200;
+        line-height: 140%;
+    }
+
+    /* skills section styling */
+    #skills {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
+    }
+
+    #skills h2 {
+        font-family: 'JetBrains Mono';
+        font-weight: 300;
+        font-size: 20px;
+        margin-top: 100px;
+    }
+    
+    img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .icons {
+        width: 100vw;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    /* footer styling */
+    footer {
+        width: 130px;
+        margin: 50px 0 10px 0;
+        display: flex;
+        align-items: center;
+        font-weight: 200;
+        font-size: 12px;
+        justify-content: space-between;
+    }
+
+    footer img {
+        width: 15px;
+        height: 15px;
+    }
+
+    /* ===========================
+    === contact.html page styling ===
+       =========================== */
+
+    .contact {
+        width: 95vw;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        row-gap: 10px;
+        border: rgb(201, 201, 201) solid 1px;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .contact h1 {
+        width: 100%;
+        font-family: Inter;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        font-size: 28px;
+        text-shadow: 0px 3px 3px rgba(116, 116, 116, 0.518);
+        margin-top: 30px;
+    }
+
+    .full-name {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .name,
+    .surname {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .surname {
+        margin: 15px 0 0;
+    }
+
+    #name,
+    #surname,
+    #email,
+    #message,
+    button {
+        margin-top: 5px;
+        padding: 10px;
+        font-family: Inter;
+        background-color: #f0f0f0;
+        border: none;
+        font-weight: 300;
+        color: rgb(161, 161, 161);
+    }
+
+    #message {
+        width: 80%;
+        height: 100px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    .message,
+    .email {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    #email {
+        width: 80%;
+    }
+
+    button {
+        margin: 30px;
+        color: black;
+    }
+
+    button:hover {
+        background-color: #9B9B9B;
+    }
+
+    @media (min-width: 744px) {
+        .hide-on-mobile {
+            display: block;
+        }
+
+        .horizontal-line {
+            width: 95vw;
+        }
+
+        .icons {
+            max-width: 700px;
+        }
+        
+        
+        
+        /* contact.html page responsiveness */
+        .full-name {
+            flex-direction: row;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .name {
+            margin-top: 15px;
+        }
+
+        #email,
+        #message {
+            width: 350px;
+        }
+    }
 
 
+    @media (min-width: 1024px) {
+        .intro > p {
+            max-width: 700px;
+        }
 
+        h1 {
+            font-size: 28px;
+        }
 
-/*  ============================== responsive design for phone ==============================  */
-@media (max-width: 430px) {
+        .horizontal-line {
+            max-width: 1000px;
+        }
 
-/* navigation */
-.main-nav ul {
-    width: 340px;
-}
+        .vertical-line {
+            display: block;
+            position: absolute;
+            top: 436px;
+            left: 50%;
+            width: 1px;
+            /* height: 2750px; */
+            height: 700px;
+            background-color: #9B9B9B;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
 
-li a[href="#timeline"] {
-    display: none;
-}
+        .left {
+            padding: 0;
+            max-width: 504px;
+            align-self: flex-start;
+            margin-left: 50%;
+            transform: translateX(-100%);
+        }
 
-/* General introductory text */
-.intro {
-    width: 400px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0;
-}
+        .right {
+            padding: 0;
+            max-width: 504px;
+            align-self: flex-end;
+            margin-right: 50%;
+            transform: translateX(100%);
+        }
 
-h1 {
-    width: 300px;
-    text-align: center;
-}
+        img {
+            width: 30px;
+            height: 30px;
+        }
 
-.intro p {
-    width: 400px;
-}
-
-.lines,
-.horizontal-line {
-    width: 300px;
-}
-
-.timeline {
-    width: 400px;
-}
-
-.left,
-.right,
-.heading {
-    width: 400px;
-}
-.icons {
-    width: 400px;
-}
-img {
-    width: 25px;
-    height: 25px;
-}
-
-/* Contact page responsive design */
-.contact-body {
-    width: 400px;
-}
-
-ul li:nth-child(2) {
-    display:none;
-}
-
-.contact,
-form {
-    width: 400px;
-    box-sizing: border-box;
-}
-
-.contact form h1 {
-    font-size: 20px;
-}
-
-.message,
-#message,
-.email,
-#email,
-.full-name {
-    width: 360px;
-    box-sizing: border-box;
-}
-
-.name,
-#name,
-.surname,
-#surname {
-    width: 170px;
-    box-sizing: border-box;
-}
-
+        /* contact.html page responsiveness */
+        .contact,
+        .main-nav {
+            max-width: 600px;
+        }
 }
